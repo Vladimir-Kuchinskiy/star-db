@@ -4,8 +4,13 @@ import RandomPlanet from "../randomPlanet";
 import ErrorButton from "../errorButton";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
 import PeoplePage from "../peoplePage/index";
+import ItemList from "../itemList/itemList";
+import PersonDetails from "../personDetails/personDetails";
+import SwapiService from "../../services/swapiService";
 
 class App extends Component {
+  swapiService = new SwapiService();
+
   state = { hasError: false };
 
   componentDidCatch() {

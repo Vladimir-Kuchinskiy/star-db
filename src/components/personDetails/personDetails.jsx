@@ -5,6 +5,7 @@ import SwapiService from "../../services/swapiService";
 import PersonView from "./personView";
 import LoaderSpinner from "../loaderSpinner/loaderSpinner";
 import ErrorIndicator from "../errorIndicator/errorIndicator";
+import ErrorButton from "../errorButton";
 
 class PersonDetails extends Component {
   swapiService = new SwapiService();
@@ -55,6 +56,7 @@ class PersonDetails extends Component {
         {errorMessage}
         {loader}
         {content}
+        <ErrorButton />
       </div>
     );
   }
